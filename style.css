@@ -1,0 +1,23 @@
+body{
+    
+    background-image: url('https://i.pinimg.com/564x/e9/0d/0e/e90d0e7e2b2a52825f9f61ace87e85d8.jpg');
+}
+
+#map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      /*html, body {*/
+      /*  height: 100%;*/
+      /*  margin: 0;*/
+      /*  padding: 0;*/
+      /*}*/
+.input1{
+          margin-top: 200px;
+          margin-left:450px;
+}
+
+.result_image{
+    height:100px;
+    width:150px;
+}
