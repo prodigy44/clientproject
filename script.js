@@ -1,42 +1,47 @@
 /*global $*/
+/*global google*/
+/*global service*/
 
 $("#result").hide();
 
 var map;
 var infowindow;
-
-function initMap() {
-var pyrmont = {lat: -33.867, lng: 151.195};
-console.log(pyrmont);
-map = new google.maps.Map(document.getElementById('map'), {
-  center: pyrmont,
-  zoom: 15
-});
-
-infowindow = new google.maps.InfoWindow();
-var service = new google.maps.places.PlacesService(map);
-service.nearbySearch({
-  location: pyrmont,
-  radius: 500,
-  type: ['store']
-}, callback);
-}
-
-function callback(results, status) {
-console.log(results)
-if (status === google.maps.places.PlacesServiceStatus.OK) {
-  for (var i = 0; i < results.length; i++) {
-    createMarker(results[i]);
-  }
-}
-}
-
-
-
-
-
+var query = 'none';
 
 //button to show result
 $("#go").click(function(){
-$("#result").show();
+  $("#result").empty();
+  var inputVal = $("#input").val();
+  query = inputVal;
+  makeSearch();
+  $("#result").show();
 });
+
+
+
+function makeSearch() {
+  map = new google.maps.Map(document.getElementById('map'), {});
+  var request = {
+    query: query,
+  };
+  service = new google.maps.places.PlacesService(map);
+  service.textSearch(request, showResults);
+}
+
+
+function showResults(results, status) {
+ console.log(results);
+  
+  
+  for (var i=0; i < results.length; i++) {
+    if(results[i].photos){
+    $("#result").append(
+     '<ul>'+
+        '<h2>' + results[i].name + '</h2>'+
+        '<img src="'+ results[i].photos[0].getUrl({'maxWidth': 100, 'maxHeight': 100}) + '"/>'+
+      '</ul>'
+      );
+    }
+   }
+  
+}

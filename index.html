@@ -2,14 +2,18 @@
 <html>
     
     <head>
+    
+    <link href="https://fonts.googleapis.com/css?family=Bubbler+One"   rel="stylesheet">
         <title>
             
         </title>
-
+        <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAEc2-CiDeqysLoypyR0Cjw6VfeH8hvGJ8&libraries=places&callback=makeSearch" async defer></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="script.js" async></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
         <!-- Latest compiled and minified CSS -->
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <link type="text/css" rel="stylesheet" href="style.css" />
-        
     </head>
     <body>
         
@@ -17,18 +21,13 @@
       <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
           <div class="container">
               <div class="navbar-header">
-                  <a class="navbar-brand" href="#"> Cravings </a>
-              </div>
+                  <a class="navbar-brand" href="#" id="cravings"> Cravings </a>
+              </div> <span id="about"><h2>About</h2></span>
+
               <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                   <div class="col-sm-3 col-md-3 pull-right">
                       <div class="navbar-form" role="search">
-                        <div class="input-group">
-                          <input  type="text" class="form-control" placeholder="Search" name="srch-term" id="srch-term">
-                          <div class="input-group-btn">
-                              <button class="btn btn-default" type="submit" id="search"><span class="glyphicon glyphicon-search"></span> search</button>
-                              
-                          </div>
-                        </div>
+                        
                     </div>
                 </div>
               </div>
@@ -37,15 +36,30 @@
           <!-- /.container -->
       </nav>
         
-    <div id="map"> </div>    
+        <div class="row" id="search">
+    <div class="col-lg-4 col-lg-offset-4 center-block input1">
+        <div class="input-group">
+            <input id="input" type="text" class="form-control in" placeholder="What are you Craving?" name="srch-term" i/> <span class="input-group-btn">
+             <button class="btn btn-default in" id="go" type="button">Go!</button>
+         </span>
+
+        </div>
+        <!-- /input-group -->
+    </div>
+    <!-- /.col-lg-6 -->
+</div>
+
+   
         
-         
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBRZWfeal_9eZQ2lEJyf5bemsMr6EH2LqU&libraries=places&callback=initMap" async defer></script>
+      <div id="result">
+          
+       <ul> <h2 class = "resturant_result">Carlos bakery </h2><image class="result_image" src="https://bryantarchway.com/food-gone-to-waste-what-can-you-do/" /> </ul>
         
+      </div>
+      <div id="map"></div>
+      
+    
         
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>    
-        <script src="script.js" async></script>
     </body>
     
 </html>

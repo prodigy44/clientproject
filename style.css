@@ -1,6 +1,8 @@
 body{
     
     background-image: url('https://i.pinimg.com/564x/e9/0d/0e/e90d0e7e2b2a52825f9f61ace87e85d8.jpg');
+    /*background-size:800px 800px;*/
+    font-family: 'Bubbler One', sans-serif;
 }
 
 #map {
@@ -20,4 +22,54 @@ body{
 .result_image{
     height:100px;
     width:150px;
+}
+
+.resturtant_result{
+    float:left;
+    color:#5128af;
+}
+
+
+
+
+
+#cravings{
+   
+   /* Chrome, Safari, Opera */
+  -webkit-animation: rainbow 3s infinite; 
+  
+  /* Internet Explorer */
+  -ms-animation: rainbow 3s infinite;
+  
+  
+ 
+  /* Standar Syntax */
+  animation: rainbow 3s infinite; 
+  
+  font-size:45px;bold;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+/* Internet Explorer */
+@-ms-keyframes rainbow{
+	20%{color: red;}
+	40%{color: yellow;}
+	60%{color: green;}
+	80%{color: blue;}
+	100%{color: orange;}	
+}
+
+
+.in{
+    
+  height:45px;
+  
+ 
 }
