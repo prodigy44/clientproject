@@ -5,6 +5,41 @@ body{
     font-family: 'Bubbler One', sans-serif;
 }
 
+
+#about{
+    color:white;
+    float:right;
+    font-size:35px;
+}
+
+.alert {
+    padding: 20px;
+    background-color: #ff4dd2; 
+    color:white;
+    font-size:20px;
+    margin-bottom: 15px;
+    border-radius:50px;
+    box-shadow: 5px 4px #cccccc;
+}
+
+/* The close button */
+.closebtn {
+    margin-left: 15px;
+    color: white;
+    font-weight: bold;
+    float: right;
+    font-size: 22px;
+    line-height: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+/* When moving the mouse over the close button */
+.closebtn:hover {
+    color: black;
+}
+
+
 #map {
         height: 100%;
       }
@@ -73,3 +108,14 @@ body{
   
  
 }
+
+.result-div {
+    background-color: white;
+    color:black;
+     width:500px;
+    height:500px;
+    text-align: center;
+}
+
+
+

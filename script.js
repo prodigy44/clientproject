@@ -3,6 +3,7 @@
 /*global service*/
 
 $("#result").hide();
+//$(".alert").hide();
 
 var map;
 var infowindow;
@@ -16,6 +17,15 @@ $("#go").click(function(){
   makeSearch();
   $("#result").show();
 });
+
+
+$(".alert").hide();
+
+$("#about").click(function(){
+    $(".alert").show();
+    });
+
+
 
 
 
@@ -35,10 +45,22 @@ function showResults(results, status) {
   
   for (var i=0; i < results.length; i++) {
     if(results[i].photos){
+    
+    var isOpentext;
+    var ifOpen = results[i].opening_hours.open_now;
+    if (ifOpen) {
+      isOpentext = "Is Open Now";
+    } else {
+      isOpentext = "Is Not Open Now";
+    }
+    
     $("#result").append(
-     '<ul>'+
+     '<ul class = "result-div">'+
         '<h2>' + results[i].name + '</h2>'+
         '<img src="'+ results[i].photos[0].getUrl({'maxWidth': 100, 'maxHeight': 100}) + '"/>'+
+        '<p class="opening_hours">' + isOpentext + '</p>' +
+        '<p class="rating"> Rating: ' + results[i].rating + '</p>' +
+        '<p class="price_level"> Pricing Level: ' + results[i].price_level + '</p>' +
       '</ul>'
       );
     }
