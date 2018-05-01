@@ -58,6 +58,7 @@ function showResults(results, status) {
      '<ul class = "result-div">'+
         '<h2>' + results[i].name + '</h2>'+
         '<img src="'+ results[i].photos[0].getUrl({'maxWidth': 100, 'maxHeight': 100}) + '"/>'+
+        '<a href="https://www.google.com/maps/place/' + results[i].formatted_address + '"> <p class="location">' + results[i].formatted_address + '</p> </a>' +
         '<p class="opening_hours">' + isOpentext + '</p>' +
         '<p class="rating"> Rating: ' + results[i].rating + '</p>' +
         '<p class="price_level"> Pricing Level: ' + results[i].price_level + '</p>' +
