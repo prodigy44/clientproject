@@ -13,7 +13,6 @@ var query = 'none';
 //button to show result
 $("#go").click(function(){
  // $("#pizza").show();
-  
   $("#result").empty();
   var inputVal = $("#input").val();
   query = inputVal;
@@ -26,11 +25,7 @@ $(".alert").hide();
 
 $("#about").click(function(){
     $(".alert").show();
-    });
-
-
-
-
+});
 
 function makeSearch() {
   map = new google.maps.Map(document.getElementById('map'), {});
