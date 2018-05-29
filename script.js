@@ -2,6 +2,7 @@
 /*global google*/
 /*global service*/
 
+//$("#pizza").hide();
 $("#result").hide();
 //$(".alert").hide();
 
@@ -11,6 +12,8 @@ var query = 'none';
 
 //button to show result
 $("#go").click(function(){
+ // $("#pizza").show();
+  
   $("#result").empty();
   var inputVal = $("#input").val();
   query = inputVal;
